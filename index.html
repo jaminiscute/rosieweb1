@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr Pepper Café</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">WELCOME TO</p>
+        <h1>🥤 Dr Pepper Café</h1>
+      </div>
+      <div class="stats">
+        <div>💵 <span id="money">$0.00</span></div>
+        <div>⭐ <span id="rating">100%</span></div>
+        <div>👥 <span id="served">0</span></div>
+      </div>
+    </header>
+
+    <section class="cafe">
+      <div class="customer-card">
+        <div class="customer" id="customer">🧑‍🍳</div>
+        <div>
+          <p class="label">CUSTOMER ORDER</p>
+          <h2 id="order">Click “New Customer” to start!</h2>
+          <p id="customerMood">Someone is waiting for a refreshing drink.</p>
+        </div>
+      </div>
+
+      <div class="counter">
+        <h2>Make the drink</h2>
+        <p class="hint">Build exactly what the customer ordered.</p>
+        <div class="ingredients">
+          <button class="ingredient" data-item="ice">🧊<span>Ice</span></button>
+          <button class="ingredient" data-item="pepper">🥤<span>Dr Pepper</span></button>
+          <button class="ingredient" data-item="cherry">🍒<span>Cherry</span></button>
+          <button class="ingredient" data-item="cream">🥛<span>Cream</span></button>
+        </div>
+        <div class="cup" id="cup">🥤<small>Empty cup</small></div>
+        <button class="serve" id="serve" disabled>Serve Drink</button>
+      </div>
+
+      <aside class="upgrades">
+        <h2>Café Upgrades</h2>
+        <button class="upgrade" data-cost="25" data-upgrade="tips">
+          <span>💰 Better Tips</span><b>$25</b>
+        </button>
+        <button class="upgrade" data-cost="50" data-upgrade="patience">
+          <span>⏱️ Happy Customers</span><b>$50</b>
+        </button>
+        <button class="upgrade" data-cost="100" data-upgrade="shop">
+          <span>🏪 Bigger Café</span><b>$100</b>
+        </button>
+      </aside>
+    </section>
+
+    <footer>
+      <button id="newCustomer">New Customer</button>
+      <p id="message">Ready to open the café?</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
