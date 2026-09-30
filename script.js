@@ -5,13 +5,13 @@ const orders = [
   { name:"Cherry Cream Dr Pepper", items:["ice","pepper","cherry","cream"], pay:16 }
   { name:"Dr Pepper Float", items:["pepper", "icecream"], pay:14 }
 ];
-const faces=["🧑","👩","👨","🧑‍🦱","👩‍🦰","👨‍🦱","👩‍🦱","🧑‍🍳"];
+const faces=["🧑","👩","👨","🧑‍🦱","👩‍🦰","👨‍🦱","👩‍🦱","👶","🧑‍🍳"];
 let current=null, drink=[], money=0, served=0, rating=100, upgrades={tips:false,patience:false,shop:false};
 
 const $=id=>document.getElementById(id);
 const moneyEl=$("money"), ratingEl=$("rating"), servedEl=$("served");
 function updateStats(){ moneyEl.textContent="$"+money.toFixed(2); ratingEl.textContent=rating+"%"; servedEl.textContent=served; }
-function pretty(items){ return items.map(x=>({ice:"Ice",pepper:"Dr Pepper",cherry:"Cherry",cream:"Cream", icecream: "Ice Cream"}[x])).join(" + "); }
+function pretty(items){ return items.map(x=>({ice:"Ice",pepper:"Dr Pepper",cherry:"Cherry",cream:"Cream",icecream: "Ice Cream"}[x])).join(" + "); }
 
 function newCustomer(){
   current=orders[Math.floor(Math.random()*orders.length)];
